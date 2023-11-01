@@ -1,31 +1,17 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import { Container, Typography, Paper } from '@mui/material';
 
-function Bio() {
+
+export default function Bio() {
   return (
-    <Container maxWidth="xl">
-      <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-      <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-          </Typography>
-      </Box>
-    </Container>
-  );
+    <Container>
+    <Paper elevation={3} style={{ padding: '20px', marginTop: '20px' }}>
+      <Typography variant="h4">About Me</Typography>
+      <Typography variant="body1">
+      PNW-based software engineer passionate about collaborative and creative approaches to elegant software solutions. My experience is informed by almost a decade of work within the hospitality sector as a chef as well as an academic background in sociology and law. I specialize in back-end development with interests in machine learning and user experience.
+      </Typography>
+    </Paper>
+  </Container>
+  )
 }
 
-export default Bio;
